@@ -1,4 +1,5 @@
-print("")
+name = input("Enter your name: ")
+print(name + "'s Contact Book")
 
 def add():
     name = input("Name: ")
@@ -14,8 +15,9 @@ def view():
         for line in c.readlines():
             print(line.rstrip())
 
+
 while True:
-    option = input("Would you like to add contacts, delete contacts, edit contacts or exit contact book (add/view/delete/edit/exit): ")
+    option = input("Would you like to add, view or exit contact book (add/view/exit): ")
     if option == "exit":
         continue
 
@@ -25,11 +27,6 @@ while True:
     elif option == "view":
         view()
 
-    elif option == "edit":
-        pass
-
-    elif option == "delete":
-        pass
     else:
-        print("Invalid option! Enter add/view/delete/edit/exit: ")
+        print("Invalid option! Enter add/view/exit: ")
         break
